@@ -1,4 +1,5 @@
 
+
 <!DOCTYPE html>
 <html>
 <head>
@@ -6,91 +7,20 @@
 	<!-- Link Swiper's CSS -->
 	<link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
 	<!-- Link your custom CSS -->
-	<link rel="stylesheet" href="style.css" />     
+	<link rel="stylesheet" type="text/css" href="style.css">
        
 </head>
 <body>
-     <div class="center">
-        <button onclick="shuffleAndPlay()">click here babe</button>
-    </div>
-	<!-- Slider main container -->
-	<div class="swiper-container">
-		<!-- Additional required wrapper -->
-		<div class="swiper-wrapper">
-			<!-- Slides -->
-			<div class="swiper-slide">
-				<img src="as1.jpg" alt="image1" />
-			</div>
-			<div class="swiper-slide">
-				<img src="as2.jpg" alt="image2" />
-			</div>
-			<div class="swiper-slide">
-				<img src="as3.jpg" alt="image3" />
-			</div>
-			<div class="swiper-slide">
-                <img src="as4.jpg" alt="image4" />
-			</div>
-			<div class="swiper-slide">
-				<img src="as5.jpg" alt="image5" />
-			</div>
-            <div class="swiper-slide">
-				<img src="as6.jpg" alt="image6" />
-			</div>
-		</div>
-		<!-- If we need pagination -->
-		<div class="swiper-pagination"></div>
-
-		<!-- If we need navigation buttons -->
-		<div class="swiper-button-prev"></div>
-		<div class="swiper-button-next"></div>
-
-		<!-- If we need scrollbar -->
-		<div class="swiper-scrollbar"></div>
-	</div>
     
-      
-	<!-- Link Swiper's JS -->
-	<script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
-
-	<!-- Initialize Swiper -->
-	<script>
-		var swiper = new Swiper(".swiper-container", {
-			slidesPerView: 1,
-			spaceBetween: 30,
-			pagination: {
-				el: ".swiper-pagination",
-				clickable: true,
-			},
-			navigation: {nextEl: ".swiper-button-next",
-				prevEl: ".swiper-button-prev",
-			},
-			scrollbar: {
-				el: ".swiper-scrollbar",
-				draggable: true,
-			},
-		});
-        function shuffleAndPlay() {
-      // Get the list of songs
-      const songs = ['Low', 'Here with me', 'K','heavenly','I Follow Rivers','Smells Like Teen Spirit','i wanna be your girlfriend','i wanna be yours','p power','Fade into you','mytery of love','die for you','je te laisserai des mots','cinnamon girl','try me','Harvest Moon','Nothing Gonna Hurt You Baby','Anyone Who Knows What Love Is (Will Understand)','Make You Feel My Love','Robbers','III. Urn','To Build A Home (feat. Patrick Watson)']
-     
-
-      // Shuffle the list of songs
-      for (var i = songs.length - 1; i > 0; i--) {
-        var j = Math.floor(Math.random() * (i + 1));
-        var temp = songs[i];
-        songs[i] = songs[j];
-        songs[j] = temp;
-      }
-
-      // Get the name of the first song in the shuffled list
-      var firstSong = songs[0];
-
-      // Redirect the user to the Anghami play page with the first song in the shuffled list as the query parameter
-      var anghamiURL = "https://play.anghami.com/search/" + encodeURIComponent(firstSong);
-      window.location.href = anghamiURL;
-    }
-	</script>
+	<div class="picture-container">
+		<img src="as1.jpg" alt="Picture 1">
+		<img src="as2.jpg" alt="Picture 2">
+		<img src="as3.jpg" alt="Picture 3">
+		<img src="as4.jpg" alt="Picture 4">
+        <img src="as5.jpg" alt="Picture 5">
+        <img src="as6.jpg" alt="Picture 6">
+		<button class="center-button" onclick="shuffleAndPlay()">Click Here babe</button>
+	</div>
+	<script src="script.js"></script>
 </body>
 </html>
-
-
