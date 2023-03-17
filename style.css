@@ -1,13 +1,16 @@
-button {
+.center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 50vh;
+}
 
-    display: block;
-    width: 18vh;
-    padding: 10px 15px;
-    border: 0;
-    background: #333;
-    color: #fff;
-    border-radius: 5px;
-    margin: 5px 0;
-    
-    
-  }
+.button {
+    background-color: #000000dd;
+    color: rgb(171, 69, 69);
+    padding: 10px 20px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 20px;
+}
